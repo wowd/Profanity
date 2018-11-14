@@ -125,7 +125,9 @@ class Blocker
      */
     public function badWords()
     {
-        $words = explode(' ', $this->text);
+        $words = collect(explode(' ', $this->text))->map(function ($value) {
+            return strtolower($value);
+        })->toArray();
 
         return collect($this->dictionary)->filter(function ($value) use ($words) {
             if ($this->strict) {
