@@ -1,5 +1,5 @@
 {
-    "name": "consoletvs/profanity",
+    "name": "wowd/profanity",
     "description": "PHP library to block bad words in a string",
     "type": "library",
     "require": {
